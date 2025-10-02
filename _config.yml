@@ -1,6 +1,23 @@
-title: Minimal theme
-logo: /assets/img/logo.png
-description: Minimal is a theme for GitHub Pages.
-show_downloads: true
-google_analytics:
-theme: jekyll-theme-minimal
+title: Ice Puck
+description: "St. Louis Blues Game Recaps & Hockey Analysis"
+baseurl: "" # leave empty for yourusername.github.io
+url: "https://emclayburn.github.io"
+lang: en
+paginate: 5
+
+# Default author for posts
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Ethan Clayburn"
+      layout: post
+
+# Plugins supported by GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
