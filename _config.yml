@@ -1,4 +1,14 @@
 # Site Settings
+remote_theme: chrisrhymes/bulma-clean-theme
+plugins:
+  - jekyll-remote-theme
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+  - kramdown-parser-gfm
+  - jekyll-redirect-from
+  
 lang: en
 title: Ice Puck
 tagline: St. Louis Blues Game Recaps & Hockey Analysis
