@@ -1,12 +1,11 @@
 # Site Settings
 lang: en
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
-email: your-email@domain.com
+title: Ice Puck
+tagline: St. Louis Blues Game Recaps & Hockey Analysis
 description: >
-  The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
-baseurl: "/bulma-clean-theme"
-url: "https://www.csrhymes.com"
+  This is a site dedicated to the St. Louis Blues and hockey in general
+baseurl: ""
+url: "https://emclayburn.github.io"
 permalink: pretty
 #favicon: /path/to/favicon.png
 gh_sponsor: chrisrhymes
