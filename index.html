@@ -5,57 +5,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ethan Clayburn | Data Analyst</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f7f7;
-      color: #222;
+      background: #f1f5f9;
+      color: #1e293b;
+      line-height: 1.6;
     }
+
     header {
-      background: #0f172a;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
       color: white;
-      padding: 40px 20px;
+      padding: 70px 20px 55px;
       text-align: center;
     }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2.8rem;
+      letter-spacing: 0.5px;
     }
-    h1, h2 {
+
+    header p {
+      margin: 0;
+      font-size: 1.15rem;
+      color: #dbeafe;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: -25px auto 40px;
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 1.6rem;
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+    }
+
+    p {
       margin-top: 0;
     }
-    .project {
-      border-top: 1px solid #ddd;
-      padding-top: 20px;
-      margin-top: 20px;
-    }
+
     a {
       color: #2563eb;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    ul {
-      padding-left: 20px;
+
+    .buttons {
+      margin-top: 18px;
     }
+
     .buttons a {
       display: inline-block;
       margin-right: 12px;
       margin-top: 10px;
-      padding: 10px 14px;
+      padding: 10px 16px;
       background: #2563eb;
       color: white;
-      border-radius: 8px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
+
     .buttons a:hover {
       background: #1d4ed8;
       text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .skill-tag {
+      background: #e0e7ff;
+      color: #1e3a8a;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .project {
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 22px;
+      background: #f8fafc;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+    }
+
+    .project h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .project p {
+      margin-bottom: 10px;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    .note {
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .contact-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 0 20px 30px;
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      main {
+        margin: -20px 15px 30px;
+        padding: 25px;
+      }
     }
   </style>
 </head>
@@ -73,50 +185,79 @@
         I use Python, SQL, and Tableau to clean data, build analyses, and create dashboards that turn raw information 
         into useful insights. My long-term goal is to work in sports analytics.
       </p>
+
       <div class="buttons">
         <a href="https://github.com/emclayburn" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/ethan-clayburn/" target="_blank">LinkedIn</a>
         <a href="resume.pdf" target="_blank">Resume</a>
+      </div>
+
+      <div class="skills">
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Tableau</span>
+        <span class="skill-tag">Pandas</span>
+        <span class="skill-tag">scikit-learn</span>
+        <span class="skill-tag">R</span>
+        <span class="skill-tag">Streamlit</span>
       </div>
     </section>
 
     <section>
       <h2>Projects</h2>
 
-      <div class="project">
-        <h3>Recruiting Funnel Analytics</h3>
-        <p>
-          Analyzed applicant pipeline data to evaluate source quality, funnel conversion rates, and recruiting outcomes.
-          Built Python reporting workflows to support data-driven hiring decisions and improve visibility across the recruiting funnel.
-        </p>
-        <p><strong>Tools:</strong> Python, pandas, CSV, reporting</p>
-        <p><strong>Note:</strong> Project details summarized here due to confidential data.</p>
-      </div>
+      <div class="projects-grid">
+        <div class="project">
+          <h3>Recruiting Funnel Analytics</h3>
+          <p>
+            Analyzed applicant pipeline data to evaluate source quality, funnel conversion rates, and recruiting outcomes.
+            Built Python reporting workflows to support data-driven hiring decisions and improve visibility across the recruiting funnel.
+          </p>
+          <p><strong>Tools:</strong> Python, pandas, CSV, reporting</p>
+          <p class="note"><strong>Note:</strong> Project details summarized here due to confidential data.</p>
+        </div>
 
-      <div class="project">
-        <h3>Sports Analytics Project</h3>
-        <p>
-          Built a sports analytics model to evaluate NHL player salary value and identify potentially overpaid and underpaid players.
-        </p>
-        <p><strong>Tools:</strong> Python, scikit-learn, Tableau</p>
-        <p><a href="https://github.com/emclayburn/Stat486_Final_Project" target="_blank">View Project</a></p>
-      </div>
+        <div class="project">
+          <h3>NHL Salary Value Analysis</h3>
+          <p>
+            Built a sports analytics model to evaluate NHL player salary value and identify potentially overpaid and underpaid players.
+          </p>
+          <p><strong>Tools:</strong> Python, scikit-learn, Tableau</p>
+          <p><a class="project-link" href="https://github.com/emclayburn/Stat486_Final_Project" target="_blank">View Project</a></p>
+        </div>
 
-      <div class="project">
-        <h3>NBA Dashboard Project</h3>
-        <p>
+        <div class="project">
+          <h3>NBA Shot Selection Dashboard</h3>
+          <p>
             Built a Tableau dashboard with a teammate to analyze how NBA shot selection has shifted over the past 15 seasons, 
-            with a focus on the rise of three-point shooting and changes in scoring trends.        
-        </p>
-        <p><strong>Tools:</strong> Tableau, Excel, SQL</p>
-        <p><a href="https://public.tableau.com/app/profile/jose.de.leon1246/viz/shared/WNRC6G37M" target="_blank">View Dashboard</a></p>
+            with a focus on the rise of three-point shooting and changes in scoring trends.
+          </p>
+          <p><strong>Tools:</strong> Tableau, Excel, SQL</p>
+          <p><a class="project-link" href="https://public.tableau.com/app/profile/jose.de.leon1246/viz/shared/WNRC6G37M" target="_blank">View Dashboard</a></p>
+        </div>
+
+        <div class="project">
+          <h3>NHL Fatigue Analysis App</h3>
+          <p>
+            Built a sports analytics project and Streamlit app to explore how scheduling and fatigue may affect NHL team performance.
+            Designed the app to make the analysis interactive and easier to explore.
+          </p>
+          <p><strong>Tools:</strong> Python, Streamlit, pandas, sports analytics</p>
+          <p><a class="project-link" href="https://emclayburn386final.streamlit.app/" target="_blank">View App</a></p>
+        </div>
       </div>
     </section>
 
     <section>
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:emclayburn@gmail.com">emclayburn@gmail.com</a></p>
+      <div class="contact-box">
+        <p>Email: <a href="mailto:emclayburn@gmail.com">emclayburn@gmail.com</a></p>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <p>© 2026 Ethan Clayburn</p>
+  </footer>
 </body>
 </html>
